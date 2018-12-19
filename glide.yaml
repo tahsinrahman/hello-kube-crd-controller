@@ -1,0 +1,8 @@
+package: github.com/tahsinrahman/hello-kube-crd-controller
+import:
+- package: k8s.io/apimachinery
+  version: kubernetes-1.12.0
+  subpackages:
+  - pkg/apis/meta/v1
+- package: k8s.io/code-generator
+  version: kubernetes-1.12.0
