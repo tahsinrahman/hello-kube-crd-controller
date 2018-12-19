@@ -38,16 +38,18 @@ func main() {
 	kubeInformerFactory := kubeInformers.NewSharedInformerFactory(kubeClient, time.Minute*10)
 	fooInformerFactory := fooInformers.NewSharedInformerFactory(fooClient, time.Minute*10)
 
-	_ = controller.NewController(
+	crdController := controller.NewController(
 		kubeClient,
 		fooClient,
-		kubeInformerFactory.Apps().V1().Deployments().Informer(),
-		fooInformerFactory.Samplecontroller().V1alpha1().Foos().Informer(),
+		kubeInformerFactory.Apps().V1().Deployments(),
+		fooInformerFactory.Samplecontroller().V1alpha1().Foos(),
 	)
 
 	stopCh := make(chan struct{})
 
 	kubeInformerFactory.Start(stopCh)
 	fooInformerFactory.Start(stopCh)
+
+	crdController.Run(2, stopCh)
 
 }
