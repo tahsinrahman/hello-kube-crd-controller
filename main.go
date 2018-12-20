@@ -50,6 +50,8 @@ func main() {
 	kubeInformerFactory.Start(stopCh)
 	fooInformerFactory.Start(stopCh)
 
-	crdController.Run(2, stopCh)
+	if err := crdController.Run(2, stopCh); err != nil {
+		log.Println("error running controller: %v", err)
+	}
 
 }

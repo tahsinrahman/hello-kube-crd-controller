@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="807f5a6b-2b96-4dc7-a2f9-af7abffce573" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.#main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artifacts/crd.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/artifacts/crd.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glide.lock" beforeDir="false" afterPath="$PROJECT_DIR$/glide.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-kube-crd-controller" beforeDir="false" afterPath="$PROJECT_DIR$/hello-kube-crd-controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/apis/samplecontroller.com/v1alpha1/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/apis/samplecontroller.com/v1alpha1/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/apis/samplecontroller.com/v1alpha1/zz_generated.deepcopy.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/apis/samplecontroller.com/v1alpha1/zz_generated.deepcopy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/controller/.#controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/controller/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/controller/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/AUTHORS" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/AUTHORS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/CONTRIBUTORS" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/CONTRIBUTORS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/README" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/_conformance/conformance_proto/conformance.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/_conformance/conformance_proto/conformance.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/extensions.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/extensions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/gogoproto/gogo.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/gogoproto/gogo.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/install-protobuf.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/install-protobuf.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/io/uint32.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/io/uint32.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/io/uint32_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/more_test_objects.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/more_test_objects.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/more_test_objects.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/more_test_objects.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/test_objects.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/test_objects.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/test_objects.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/jsonpb/jsonpb_test_proto/test_objects.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/compare/compare.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/compare/compare.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/equal/equal.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/equal/equal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/gostring/gostring.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/gostring/gostring.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/gostring/gostringtest.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/gostring/gostringtest.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/marshalto/marshalto.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/marshalto/marshalto.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/populate/populate.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/populate/populate.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/size/size.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/size/size.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/testgen/testgen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/testgen/testgen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/unmarshal/unmarshal.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/plugin/unmarshal/unmarshal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/decode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/decode_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/encode.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/encode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/encode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/encode_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/lib.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/lib.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/properties.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/properties.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/proto3_proto/proto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/proto3_proto/proto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/testdata/test.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/testdata/test.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/text.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/text.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/text_parser.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/text_parser.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/text_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/proto/text_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/any.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/any.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/compiler/plugin.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/descriptor.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/descriptor.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/duration.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/duration.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/timestamp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protobuf/google/protobuf/timestamp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-combo/combo.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-combo/combo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/descriptor.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/descriptor.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/descriptor_gostring.gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/descriptor_gostring.gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/generator/generator.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/generator/generator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/plugin/plugin.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/plugin/plugin.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/testdata/my_test/test.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/protoc-gen-gogo/testdata/my_test/test.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/asymetric-issue125/asym.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/asymetric-issue125/asym.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/asymetric-issue125/asympb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/asymetric-issue125/asympb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/both/casttype.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/both/casttype.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/both/casttypepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/both/casttypepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/marshaler/casttype.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/marshaler/casttype.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/marshaler/casttypepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/marshaler/casttypepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/neither/casttype.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/neither/casttype.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/neither/casttypepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/neither/casttypepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/unmarshaler/casttype.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/unmarshaler/casttype.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/unmarshaler/casttypepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/casttype/combos/unmarshaler/casttypepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/castvalue.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/castvalue.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/castvaluepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/castvaluepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/both/castvalue.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/both/castvalue.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/both/castvaluepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/both/castvaluepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/marshaler/castvalue.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/marshaler/castvalue.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/marshaler/castvaluepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/marshaler/castvaluepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/unmarshaler/castvalue.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/unmarshaler/castvalue.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/unmarshaler/castvaluepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/castvalue/combos/unmarshaler/castvaluepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/both/thetest.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/both/thetest.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/both/thetestpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/both/thetestpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/marshaler/thetest.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/marshaler/thetest.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/marshaler/thetestpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/marshaler/thetestpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/unmarshaler/thetest.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/unmarshaler/thetest.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/unmarshaler/thetestpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/combos/unmarshaler/thetestpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/custombytesnonstruct/proto.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/custombytesnonstruct/proto.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/data/data.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/data/data.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/data/datapb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/data/datapb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/empty-issue70/empty.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/empty-issue70/empty.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumcustomname/enumcustomname.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumcustomname/enumcustomname.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl/enumdecl.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl/enumdecl.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl/enumdeclpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl/enumdeclpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl_all/enumdeclall.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl_all/enumdeclall.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl_all/enumdeclallpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumdecl_all/enumdeclallpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumprefix/enumprefix.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumprefix/enumprefix.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumstringer/enumstringer.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumstringer/enumstringer.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumstringer/enumstringerpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/enumstringer/enumstringerpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/example/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/example/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/example/example.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/example/example.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/example/examplepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/example/examplepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/filedotname/file.dot.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/filedotname/file.dot.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/filedotname/file.dotpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/filedotname/file.dotpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/fuzztests/fuzz.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/fuzztests/fuzz.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/group/group.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/group/group.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/group/grouppb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/group/grouppb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/importdedup/proto.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/importdedup/proto.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/importdedup/subpkg/subproto.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/importdedup/subpkg/subproto.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/index/index.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/index/index.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/index/indexpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/index/indexpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/indeximport.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/indeximport.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/indeximportpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/indeximport-issue72/indeximportpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/int64support/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/int64support/object.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/int64support/object.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/int64support/object_js.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/int64support/object_js_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/int64support/objectpb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue260/issue260.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue260/issue260.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue260/issue260pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue260/issue260pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue260/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue260/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue261/issue261.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue261/issue261.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue262/timefail.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue262/timefail.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue312/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue312/events/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue312/events/events.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue312/events/events.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue312/events/eventspb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue312/issue312.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue312/issue312.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue322/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue322/issue322.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue322/issue322.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue322/issue322pb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue330/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue330/issue330.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue330/issue330.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue330/issue330pb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue330/type.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue34/proto.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue34/proto.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue42order/issue42.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue42order/issue42.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue8/proto.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue8/proto.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue8/protopb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/issue8/protopb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/jsonpb-gogo/jsonpb_gogo_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/both/map.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/both/map.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/both/map_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/both/mappb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/marshaler/map.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/marshaler/map.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/marshaler/map_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/marshaler/mappb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/neither/map.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/neither/map.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/neither/map_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/neither/mappb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/unmarshaler/map.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/unmarshaler/map.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/unmarshaler/map_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/combos/unmarshaler/mappb_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/map.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/map.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapdefaults/map_test.go.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/both/mapsproto2.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/both/mapsproto2.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/both/mapsproto2pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/both/mapsproto2pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/marshaler/mapsproto2.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/marshaler/mapsproto2.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/marshaler/mapsproto2pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/marshaler/mapsproto2pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/neither/mapsproto2.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/neither/mapsproto2.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/neither/mapsproto2pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/neither/mapsproto2pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/unmarshaler/mapsproto2.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/unmarshaler/mapsproto2.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/unmarshaler/mapsproto2pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mapsproto2/combos/unmarshaler/mapsproto2pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/marshal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/marshal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/marshaler.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/marshaler.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/mixbench.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/mixbench.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/oldmarshaler.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/oldunmarshaler.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unmarshal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unmarshal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unmarshaler.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unmarshaler.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unsafe_marshaler.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unsafe_marshaler.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unsafe_unmarshaler.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/mixbench/unsafe_unmarshaler.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/moredefaults/md.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/moredefaults/md.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/moredefaults/mdpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/moredefaults/mdpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/nopackage/nopackage.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/nopackage/nopackage.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/both/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/both/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/both/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/both/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/marshaler/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/marshaler/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/marshaler/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/marshaler/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/neither/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/neither/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/neither/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/neither/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/unmarshaler/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/unmarshaler/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/unmarshaler/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof/combos/unmarshaler/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/both/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/both/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/both/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/both/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/marshaler/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/marshaler/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/marshaler/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/marshaler/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/neither/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/neither/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/neither/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/neither/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/unmarshaler/one.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/unmarshaler/one.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/unmarshaler/onepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneof3/combos/unmarshaler/onepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneofembed/oneofembed.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneofembed/oneofembed.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneofembed/oneofembedpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/oneofembed/oneofembedpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/packed/packed.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/packed/packed.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/proto3extension/proto3ext.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/proto3extension/proto3ext.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/protosize/protosize.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/protosize/protosize.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/protosize/protosizepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/protosize/protosizepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/required/requiredexample.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/required/requiredexample.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/sizerconflict/doc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/sizeunderscore/sizeunderscore.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/sizeunderscore/sizeunderscore.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/sizeunderscore/sizeunderscorepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/sizeunderscore/sizeunderscorepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/stdtypes/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/stdtypes/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/stdtypes/concurrency_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/stdtypes/stdtypes.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/stdtypes/stdtypes.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/stdtypes/stdtypespb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/stdtypes/stdtypespb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/tags/tags.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/tags/tags.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/both/theproto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/both/theproto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/both/theproto3pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/both/theproto3pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/marshaler/theproto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/marshaler/theproto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/marshaler/theproto3pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/marshaler/theproto3pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/neither/theproto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/neither/theproto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/neither/theproto3pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/neither/theproto3pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/unmarshaler/theproto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/unmarshaler/theproto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/unmarshaler/theproto3pb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/theproto3/combos/unmarshaler/theproto3pb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/thetest.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/thetest.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/thetestpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/thetestpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl/typedecl.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl/typedecl.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl/typedeclpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl/typedeclpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl_all/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl_all/models.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl_all/typedeclall.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl_all/typedeclall.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl_all/typedeclallpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedecl_all/typedeclallpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedeclimport/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedeclimport/models.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedeclimport/subpkg/subpkg.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedeclimport/subpkg/subpkg.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedeclimport/typedeclimport.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedeclimport/typedeclimport.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/typedeclimport/typedeclimport_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/both/types.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/both/types.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/both/typespb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/both/typespb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/marshaler/types.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/marshaler/types.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/marshaler/typespb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/marshaler/typespb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/neither/types.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/neither/types.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/neither/typespb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/neither/typespb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/unmarshaler/types.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/unmarshaler/types.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/unmarshaler/typespb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/types/combos/unmarshaler/typespb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unmarshalmerge/unmarshalmerge.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unmarshalmerge/unmarshalmerge.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unmarshalmerge/unmarshalmergepb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unmarshalmerge/unmarshalmergepb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognized/unrecognized.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognized/unrecognized.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognized/unrecognizedpb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognized/unrecognizedpb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognizedgroup/unrecognizedgroup.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognizedgroup/unrecognizedgroup.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognizedgroup/unrecognizedgrouppb_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/test/unrecognizedgroup/unrecognizedgrouppb_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/any.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/any.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/any.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/any.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/duration.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/duration.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/duration_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/duration_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/empty.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/empty.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/field_mask.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/field_mask.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/struct.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/struct.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/timestamp.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/timestamp.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/timestamp.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/timestamp.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/timestamp_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/timestamp_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/wrappers.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/types/wrappers.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/field.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/field.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/fast/gogovanity.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/fast/gogovanity.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/fast/proto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/fast/proto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/fast/vanity.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/fast/vanity.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/faster/gogovanity.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/faster/gogovanity.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/faster/proto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/faster/proto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/faster/vanity.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/faster/vanity.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/slick/gogovanity.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/slick/gogovanity.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/slick/proto3.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/slick/proto3.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/slick/vanity.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/gogo/protobuf/vanity/test/slick/vanity.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/CODE_OF_CONDUCT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/doc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue17_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue23_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue33_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue38_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue50_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue52_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue61_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue64_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/issue66_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/map.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/merge.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/merge_appendslice_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/merge_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/mergo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/mergo_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/pr80_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/pr81_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/testdata/license.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/imdario/mergo/testdata/thing.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/Gopkg.lock" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/Gopkg.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/Gopkg.toml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/Gopkg.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/api_tests/decoder_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/api_tests/decoder_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/extra/naming_strategy.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/extra/naming_strategy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/extra/naming_strategy_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/extra/naming_strategy_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/extra/privat_fields.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/extra/privat_fields.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/value_tests/struct_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/json-iterator/go/value_tests/struct_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/Gopkg.toml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/Gopkg.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/reflect2.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/reflect2.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/test.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/type_map.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/modern-go/reflect2/type_map.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/bool.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/bool_slice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/bool_slice_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/bool_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/bytes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/bytes_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/count.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/count_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/duration.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/duration_slice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/duration_slice_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/example_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/export_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/flag.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/flag_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/float32.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/float64.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/golangflag.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/golangflag_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/int.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/int16.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/int32.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/int64.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/int8.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/int_slice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/int_slice_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/ip.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/ip_slice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/ip_slice_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/ip_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/ipmask.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/ipnet.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/ipnet_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/printusage_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/string.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/string_array.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/string_array_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/string_slice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/string_slice_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/uint.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/uint16.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/uint32.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/uint64.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/uint8.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/uint_slice.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/uint_slice_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/verify/all.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/verify/gofmt.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/spf13/pflag/verify/golint.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/context/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/context/context.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/dns/dnsmessage/message.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/dns/dnsmessage/message.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/dns/dnsmessage/message_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/dns/dnsmessage/message_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/html/atom/gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/html/atom/gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/html/atom/table.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/html/atom/table.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/html/atom/table_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/html/atom/table_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/html/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/html/const.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/html/doc.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/html/doc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/html/token.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/html/token.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http/httpproxy/export_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http/httpproxy/go19_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http/httpproxy/proxy.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http/httpproxy/proxy_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/ciphers.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/ciphers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/configure_transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/configure_transport.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/go19_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/go19_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/server_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/server_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/write.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/write.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/idna.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/idna.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/idna_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/idna_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/tables.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/tables.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/trieval.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/idna/trieval.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/iana/gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/iana/gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/nettest/stack.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/nettest/stack.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/iovec_32bit.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/iovec_32bit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/iovec_64bit.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/iovec_64bit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/iovec_solaris_64bit.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/iovec_solaris_64bit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_bsdvar.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_bsdvar.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_linux_32bit.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_linux_32bit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_linux_64bit.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_linux_64bit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_openbsd.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_openbsd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_solaris_64bit.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/msghdr_solaris_64bit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/socket.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/socket.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/socket_go1_9_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/socket_go1_9_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/sys_posix.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/sys_posix.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/internal/socket/zsys_darwin_arm64.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/ipv4/gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/ipv4/gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/ipv6/gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/ipv6/gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/proxy/per_host.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/proxy/per_host.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/proxy/socks5.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/proxy/socks5.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/publicsuffix/gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/publicsuffix/gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/publicsuffix/table.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/publicsuffix/table.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/publicsuffix/table_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/publicsuffix/table_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/route/route_classic.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/route/route_classic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/webdav/lock_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/webdav/lock_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/apic.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/apic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/decode.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/decode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/decode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/decode_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/emitterc.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/emitterc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/encode.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/encode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/encode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/encode_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/example_embedded_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/example_embedded_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/readerc.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/readerc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/resolve.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/resolve.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/scannerc.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/scannerc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/sorter.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/sorter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/writerc.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/writerc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/yaml.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/yaml.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/yamlh.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gopkg.in/yaml.v2/yamlh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/api/Godeps/Godeps.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/api/Godeps/Godeps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1/generated.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1/generated.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1/types_swagger_doc_generated.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1/types_swagger_doc_generated.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1beta1/generated.proto" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1beta1/generated.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1beta1/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1beta1/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1beta1/types_swagger_doc_generated.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/api/storage/v1beta1/types_swagger_doc_generated.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/Godeps/Godeps.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/Godeps/Godeps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/discovery/cached/memcache.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/discovery/cached/memcache.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/discovery/cached/memcache_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/discovery/cached/memcache_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/discovery/discovery_client.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/discovery/discovery_client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/config_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/config_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/request.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/request.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/request_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/request_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/token_source.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/rest/token_source_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/testing/fixture.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/testing/fixture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/testing/fixture_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/testing/fixture_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/cache/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/cache/OWNERS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/clientcmd/client_config.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/clientcmd/client_config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/clientcmd/client_config_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/clientcmd/client_config_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/watch/until_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/tools/watch/until_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/transport/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/transport/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/transport/round_trippers.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/transport/round_trippers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/certificate/certificate_manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/certificate/certificate_manager.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/certificate/certificate_manager_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/certificate/certificate_manager_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/workqueue/default_rate_limiters.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/workqueue/default_rate_limiters.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/workqueue/rate_limitting_queue.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/client-go/util/workqueue/rate_limitting_queue_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/Godeps/Godeps.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/Godeps/Godeps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/OWNERS" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/OWNERS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/cmd/openapi-gen/openapi-gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/cmd/openapi2smd/openapi2smd.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/aggregator/aggregator.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/aggregator/aggregator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/builder/openapi.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/builder/openapi.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/builder/openapi_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/builder/openapi_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/common/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/common/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/api_linter.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/api_linter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/extension.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/extension.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/openapi.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/openapi.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/rules/OWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/rules/omitempty_match_case.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/generators/rules/omitempty_match_case_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/schemaconv/smd.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/schemaconv/smd_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/schemaconv/testdata/new-schema.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/schemaconv/testdata/swagger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/proto/document.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/proto/document.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/proto/openapi.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/proto/openapi.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/util_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/pkg/util/util_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/builder/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/builder/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/integration_suite_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/integration_suite_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/pkg/generated/openapi_generated.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/pkg/generated/openapi_generated.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/testdata/dummytype/alpha.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/testdata/dummytype/beta.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/testdata/golden.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/testdata/golden.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/testdata/golden.report" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/testdata/listtype/map-list.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/k8s.io/kube-openapi/test/integration/testdata/listtype/map-list.go" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/factory.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="185" column="31" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/internalinterfaces/factory_interfaces.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/listers/apps/v1/deployment.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/controller/controller.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="148" selection-start-line="148" selection-end-line="148" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2195" />
+    <option name="width" value="1900" />
+    <option name="height" value="789" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="externalversions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="externalversions" type="462c0819:PsiDirectoryNode" />
+              <item name="factory.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="controller.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="deployment.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="interface.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="interface.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="internalinterfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s.io" type="462c0819:PsiDirectoryNode" />
+              <item name="client-go" type="462c0819:PsiDirectoryNode" />
+              <item name="informers" type="462c0819:PsiDirectoryNode" />
+              <item name="internalinterfaces" type="462c0819:PsiDirectoryNode" />
+              <item name="factory_interfaces.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hello-kube-crd-controller" type="462c0819:PsiDirectoryNode" />
+              <item name="main.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.11.4" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.11.4" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.11.4" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.11.4" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+              <item name="panic.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.11.4" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+              <item name="proc.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+            <path>
+              <item name="hello-kube-crd-controller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.11.4" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+              <item name="signal_unix.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../k8s.io/sample-controller" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/tahsinrahman/hello-kube-crd-controller" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="hello-kube-crd-controller" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/" />
+      <package value="github.com/tahsinrahman/hello-kube-crd-controller" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="-2" width="1920" height="1082" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32963374" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2497332" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32963374" />
+      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.39955604" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/pkg/controller/controller.go</url>
+          <line>168</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///usr/local/go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="200" selection-start-line="200" selection-end-line="200" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="521" selection-start-line="521" selection-end-line="521" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/apimachinery/pkg/util/runtime/runtime.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/client/informers/externalversions/factory.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/apimachinery/pkg/util/wait/wait.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="330" selection-start-line="330" selection-end-line="330" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/signal_unix.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="389" selection-start-line="389" selection-end-line="389" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="680" selection-start-line="680" selection-end-line="680" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/controller/controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/listers/apps/v1/deployment.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/apps/v1/daemonset.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/apps/v1/interface.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/apps/interface.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/tools/cache/shared_informer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="957">
+          <caret line="134" column="31" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/apps/v1/deployment.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="39" selection-start-line="35" selection-start-column="5" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/factory.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="185" column="31" selection-start-line="185" selection-start-column="31" selection-end-line="185" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/k8s.io/client-go/informers/internalinterfaces/factory_interfaces.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

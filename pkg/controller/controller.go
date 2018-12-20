@@ -11,9 +11,7 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
 
-	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
 
@@ -21,26 +19,32 @@ import (
 	crd_lister "github.com/tahsinrahman/hello-kube-crd-controller/pkg/client/listers/samplecontroller.com/v1alpha1"
 	deploy_informer "k8s.io/client-go/informers/apps/v1"
 	deploy_lister "k8s.io/client-go/listers/apps/v1"
+
+	sampleV1beta1 "github.com/tahsinrahman/hello-kube-crd-controller/pkg/apis/samplecontroller.com/v1alpha1"
+	appsv1 "k8s.io/api/apps/v1"
+	corev1 "k8s.io/api/core/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	kutil_appsv1 "github.com/appscode/kutil/apps/v1"
 )
 
 // Controller defines the specifications of the controller
 type Controller struct {
 	kubeClientset kubernetes.Interface
-	crdClientset  clientset.Interface
+	fooClientset  clientset.Interface
 
 	deploymentLister deploy_lister.DeploymentLister
-	fooLister        crd_lister.FooLister
-
 	deploymentSyncer cache.InformerSynced
-	fooSyncer        cache.InformerSynced
 
-	queue workqueue.RateLimitingInterface
+	fooLister crd_lister.FooLister
+	fooSyncer cache.InformerSynced
+	queue     workqueue.RateLimitingInterface
 }
 
 // NewController creates a new controller and returns the pointer to that controller
 func NewController(
 	kubeClientset kubernetes.Interface,
-	crdClientset clientset.Interface,
+	fooClientset clientset.Interface,
 	deploymentInformer deploy_informer.DeploymentInformer,
 	fooInformer crd_informer.FooInformer,
 ) *Controller {
@@ -49,15 +53,15 @@ func NewController(
 
 	controller := &Controller{
 		kubeClientset: kubeClientset,
-		crdClientset:  crdClientset,
+		fooClientset:  fooClientset,
 
 		deploymentLister: deploymentInformer.Lister(),
-		fooLister:        fooInformer.Lister(),
-
 		deploymentSyncer: deploymentInformer.Informer().HasSynced,
-		fooSyncer:        fooInformer.Informer().HasSynced,
 
-		queue: workqueue.NewNamedRateLimitingQueue(workqueue.DefaultControllerRateLimiter(), "Foos"),
+		fooLister: fooInformer.Lister(),
+		fooSyncer: fooInformer.Informer().HasSynced,
+
+		queue: workqueue.NewRateLimitingQueue(workqueue.DefaultControllerRateLimiter()),
 	}
 
 	log.Println("setting up event handlers")
@@ -92,26 +96,28 @@ func (c *Controller) handleObject(obj interface{}) {
 	if !ok {
 		tombstone, ok := obj.(cache.DeletedFinalStateUnknown)
 		if !ok {
-			fmt.Println("error decoding object")
+			log.Println("error decoding object")
 			return
 		}
 		object, ok = tombstone.Obj.(metav1.Object)
 		if !ok {
-			fmt.Println("error decoding tombstone object")
+			log.Println("error decoding tombstone object")
 			return
 		}
-		fmt.Printf("recovered deleted object: %v\n", object.GetName())
+		log.Printf("recovered deleted object: %v\n", object.GetName())
 	}
-	fmt.Printf("processing object: %v\n", object.GetName())
+	log.Printf("handling deployment: %v\n", object.GetName())
 
+	log.Println("ownerRef: ", metav1.GetControllerOf(object))
 	if ownerRef := metav1.GetControllerOf(object); ownerRef != nil {
+		log.Println(ownerRef)
 		if ownerRef.Kind != "Foo" {
 			return
 		}
 
-		foo, err := c.crdClientset.SamplecontrollerV1alpha1().Foos(object.GetNamespace()).Get(object.GetName(), metav1.GetOptions{})
+		foo, err := c.fooLister.Foos(object.GetNamespace()).Get(ownerRef.Name)
 		if err != nil {
-			fmt.Printf("error while processing object: %v\n", object.GetName())
+			log.Printf("error while processing object: %v\n", object.GetName())
 			return
 		}
 		c.enqueueFoo(foo)
@@ -121,20 +127,21 @@ func (c *Controller) handleObject(obj interface{}) {
 func (c *Controller) enqueueFoo(obj interface{}) {
 	key, err := cache.MetaNamespaceKeyFunc(obj)
 	if err != nil {
-		fmt.Printf("can't enqueu object %v\n", key)
+		log.Printf("can't enqueu object %v\n", key)
 		return
 	}
+	log.Println("queueing object ", key)
 	c.queue.AddRateLimited(key)
 }
 
 // Run waits for caches to be synced and then starts the worker goroutines
-func (c *Controller) Run(threadiness int, stopCh chan struct{}) error {
+func (c *Controller) Run(threadiness int, stopCh <-chan struct{}) error {
 	defer utilruntime.HandleCrash()
 	defer c.queue.ShutDown()
 
-	fmt.Println("starting foo controller")
+	log.Println("starting foo controller")
 
-	fmt.Println("waiting for caches to be synced")
+	log.Println("waiting for caches to be synced")
 
 	if ok := cache.WaitForCacheSync(stopCh, c.deploymentSyncer, c.fooSyncer); !ok {
 		return fmt.Errorf("failed to wait for caches to synced")
@@ -144,11 +151,11 @@ func (c *Controller) Run(threadiness int, stopCh chan struct{}) error {
 		go wait.Until(c.runWorker, time.Second, stopCh)
 	}
 
-	fmt.Println("started workers")
+	log.Println("started workers")
 
 	<-stopCh
 
-	fmt.Println("workers stopped")
+	log.Println("workers stopped")
 
 	return nil
 }
@@ -159,24 +166,32 @@ func (c *Controller) runWorker() {
 }
 
 func (c *Controller) processNextItem() bool {
-	key, quit := c.queue.Get()
+	log.Println("inside processedNextItem")
+	obj, quit := c.queue.Get()
 	if quit {
 		return false
 	}
 
-	err := func(key string) error {
-		defer c.queue.Done(key)
+	err := func(obj interface{}) error {
+		defer c.queue.Done(obj)
+
+		key, ok := obj.(string)
+		if !ok {
+			c.queue.Forget(key)
+			return nil
+		}
 
 		if err := c.syncItem(key); err != nil {
 			c.queue.AddRateLimited(key)
 			return fmt.Errorf("error syncing item %v", key)
 		}
+		log.Println(key)
 
-		c.queue.Forget(key)
-		fmt.Println("successfully synced")
+		c.queue.Forget(obj)
+		log.Println("successfully synced")
 
 		return nil
-	}(key.(string))
+	}(obj)
 
 	if err != nil {
 		utilruntime.HandleError(err)
@@ -191,6 +206,8 @@ func (c *Controller) syncItem(key string) error {
 		return err
 	}
 
+	log.Printf("syncing %v %v\n", namespace, name)
+
 	// get the foo resource with this name and namespace
 	foo, err := c.fooLister.Foos(namespace).Get(name)
 	if err != nil {
@@ -201,5 +218,77 @@ func (c *Controller) syncItem(key string) error {
 		return err
 	}
 
+	deploymentName := foo.Spec.DeploymentName
+	deployment, err := c.deploymentLister.Deployments(foo.Namespace).Get(deploymentName)
+	if errors.IsNotFound(err) {
+		log.Println("deployment deleted, creating new deployment")
+		deployment, err = c.kubeClientset.Apps().Deployments(namespace).Create(newDeployment(foo))
+		if err != nil {
+			return err
+		}
+		if err := kutil_appsv1.WaitUntilDeploymentReady(c.kubeClientset, deployment.ObjectMeta); err != nil {
+			return err
+		}
+		log.Println("deployment created!")
+	}
+
+	if err != nil {
+		return err
+	}
+
+	log.Printf("syncing: %v\n", deployment.GetName())
+
+	if foo.Spec.Replicas != nil && *deployment.Spec.Replicas != *foo.Spec.Replicas {
+		deployment, err = c.kubeClientset.Apps().Deployments(namespace).Update(newDeployment(foo))
+		if err != nil {
+			return err
+		}
+	}
+
+	log.Println("updating foo status")
+	if err := c.updateFooStatus(foo, deployment); err != nil {
+		return err
+	}
+
 	return nil
+}
+
+func (c *Controller) updateFooStatus(foo *sampleV1beta1.Foo, deployment *appsv1.Deployment) error {
+	fooCopy := foo.DeepCopy()
+	fooCopy.Status.AvailableReplicas = deployment.Status.AvailableReplicas
+	_, err := c.fooClientset.SamplecontrollerV1alpha1().Foos(fooCopy.Namespace).Update(fooCopy)
+	return err
+}
+
+func newDeployment(foo *sampleV1beta1.Foo) *appsv1.Deployment {
+	labels := map[string]string{
+		"app":        "nginx",
+		"controller": foo.Name,
+	}
+	return &appsv1.Deployment{
+		ObjectMeta: metav1.ObjectMeta{
+			Name:            foo.Spec.DeploymentName,
+			Namespace:       foo.Namespace,
+			OwnerReferences: []metav1.OwnerReference{},
+		},
+		Spec: appsv1.DeploymentSpec{
+			Replicas: foo.Spec.Replicas,
+			Selector: &metav1.LabelSelector{
+				MatchLabels: labels,
+			},
+			Template: corev1.PodTemplateSpec{
+				ObjectMeta: metav1.ObjectMeta{
+					Labels: labels,
+				},
+				Spec: corev1.PodSpec{
+					Containers: []corev1.Container{
+						{
+							Name:  "nginx",
+							Image: "nginx:latest",
+						},
+					},
+				},
+			},
+		},
+	}
 }

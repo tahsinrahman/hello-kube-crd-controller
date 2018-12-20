@@ -29,8 +29,8 @@ type FooStatus struct {
 
 // FooList is the list of Foo resources
 type FooList struct {
-	metav1.TypeMeta   `json:",inline"`
-	metav1.ObjectMeta `json:"metadata,omitempty"`
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata"`
 
 	Items []Foo `json:"items"`
 }

@@ -1,6 +1,17 @@
 hash: 52ddb66eea37e9e4a8f0502ab9ec212f1ed2beb41e00de4dcfdc8ba6c6dc6188
-updated: 2018-12-20T02:59:41.609950188+06:00
+updated: 2018-12-20T19:25:12.784149319+06:00
 imports:
+- name: github.com/appscode/go
+  version: 584aaa73af837f112c0a471be398ea837341c330
+  subpackages:
+  - types
+- name: github.com/appscode/kutil
+  version: d9fb2e606bf2c196a8cd8cff13097f531d686a44
+  subpackages:
+  - apps/v1
+  - core/v1
+- name: github.com/appscode/mergo
+  version: 9f23e2d6bd2a77f959b2bf6acdbefd708a83a4a4
 - name: github.com/davecgh/go-spew
   version: 782f4967f2dc4564575ca782fe2d04090b5faca8
   subpackages:
@@ -52,6 +63,8 @@ imports:
   version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
 - name: github.com/peterbourgon/diskv
   version: 5f041e8faa004a95c88a202771f4cc3e991971e6
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/spf13/pflag
   version: 583c0c0531f06d5278b7d917446061adc344b5cd
 - name: golang.org/x/crypto
@@ -105,7 +118,7 @@ imports:
 - name: gopkg.in/yaml.v2
   version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
 - name: k8s.io/api
-  version: b7bd5f2d334ce968edc54f5fdb2ac67ce39c56d5
+  version: d04500c8c3dda9c980b668c57abc2ca61efcf5c4
   subpackages:
   - admissionregistration/v1alpha1
   - admissionregistration/v1beta1
@@ -186,7 +199,7 @@ imports:
   - third_party/forked/golang/json
   - third_party/forked/golang/reflect
 - name: k8s.io/client-go
-  version: 8abb21031259350aad0799bb42ba213ee8bb3399
+  version: 248a9512b9046dd924d1670cf952b6d729ff2f59
   subpackages:
   - discovery
   - discovery/fake
@@ -332,8 +345,4 @@ imports:
   version: c59034cc13d587f5ef4e85ca0ade0c1866ae8e1d
   subpackages:
   - pkg/util/proto
-- name: k8s.io/sample-controller
-  version: 9925b3e980c88be4366238a15b54a9dc8aed35a8
-  subpackages:
-  - pkg/apis/samplecontroller
 testImports: []

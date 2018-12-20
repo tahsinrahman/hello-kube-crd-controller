@@ -5,16 +5,7 @@ metadata:
 spec:
   group: samplecontroller.com
   version: v1alpha1
-  scope: Namespaced
   names:
     kind: Foo
     plural: foos
-    singular: foo
----
-apiVersion: samplecontroller.com/v1alpha1
-kind: Foo
-metadata:
-  name: example-foo
-spec:
-  deploymentName: example-foo
-  replicas: 1
+  scope: Namespaced
