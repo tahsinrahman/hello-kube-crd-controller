@@ -12,6 +12,7 @@ import (
 	"k8s.io/client-go/util/workqueue"
 
 	"k8s.io/apimachinery/pkg/api/errors"
+	"k8s.io/apimachinery/pkg/runtime/schema"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
 
@@ -267,9 +268,15 @@ func newDeployment(foo *sampleV1beta1.Foo) *appsv1.Deployment {
 	}
 	return &appsv1.Deployment{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:            foo.Spec.DeploymentName,
-			Namespace:       foo.Namespace,
-			OwnerReferences: []metav1.OwnerReference{},
+			Name:      foo.Spec.DeploymentName,
+			Namespace: foo.Namespace,
+			OwnerReferences: []metav1.OwnerReference{
+				*metav1.NewControllerRef(foo, schema.GroupVersionKind{
+					Group:   sampleV1beta1.SchemeGroupVersion.Group,
+					Version: sampleV1beta1.SchemeGroupVersion.Version,
+					Kind:    "Foo",
+				}),
+			},
 		},
 		Spec: appsv1.DeploymentSpec{
 			Replicas: foo.Spec.Replicas,

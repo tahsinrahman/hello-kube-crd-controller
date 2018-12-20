@@ -35,8 +35,8 @@ func main() {
 		log.Fatal("error building foo clientset: %v", err)
 	}
 
-	kubeInformerFactory := kubeInformers.NewSharedInformerFactory(kubeClient, time.Minute*10)
-	fooInformerFactory := fooInformers.NewSharedInformerFactory(fooClient, time.Minute*10)
+	kubeInformerFactory := kubeInformers.NewSharedInformerFactory(kubeClient, time.Minute*1)
+	fooInformerFactory := fooInformers.NewSharedInformerFactory(fooClient, time.Minute*1)
 
 	crdController := controller.NewController(
 		kubeClient,
